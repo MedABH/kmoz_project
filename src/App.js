@@ -15,14 +15,14 @@ function App() {
       <MenuBar/>
       <br/>
       <Routes>
-        <Route path="/" element={<Accueil/>}></Route>
-        <Route path="/contacts" element={<Contacts/>}></Route>
-        <Route path="/calculation" element={<Calculator/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/pims" element={<Pims/>}></Route>
-        <Route path="/woodcoin" element={<Woodcoin/>}></Route>
-        <Route path="/vpn" element={<Vpn/>}></Route>
-        <Route path="/fs" element={<Fs/>}></Route>
+        <Route path="/kmoz_project/public" element={<Accueil/>}></Route>
+        <Route path="/kmoz_project/contacts/public" element={<Contacts/>}></Route>
+        <Route path="/kmoz_project/public/calculation" element={<Calculator/>}></Route>
+        <Route path="/kmoz_project/public/about" element={<About/>}></Route>
+        <Route path="/kmoz_project/public/pims" element={<Pims/>}></Route>
+        <Route path="/kmoz_project/public/woodcoin" element={<Woodcoin/>}></Route>
+        <Route path="/kmoz_project/public/vpn" element={<Vpn/>}></Route>
+        <Route path="/kmoz_project/public/fs" element={<Fs/>}></Route>
       </Routes>
       </div>
   );

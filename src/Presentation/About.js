@@ -12,7 +12,7 @@ export default function About(){
                 <br/>
                 Fullstack engineer
                 <br/>
-                <img src="logo_about/docker_fqemxt.svg"/>
+                <img src="logo_about\docker_fqemxt.svg"/>
                 <img src="logo_about\nodejs_nvy01k.svg"/>
                 <img src="logo_about\npm_j6sriv.svg"/>
                 <img src="logo_about\html_bzmpcs.svg"/>
