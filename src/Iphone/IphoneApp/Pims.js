@@ -7,7 +7,55 @@ function Pims(){
         <div>
             <br/>
             <div>
-                <h1 className="text-center">Images !!!</h1>
+                
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\1.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\2_nbzudp.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\3.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\4_pqydvf.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\5_plievp.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\6_cl95ng.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\7.png" alt=""></img>
+                    </div>
+
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\1.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\2_nbzudp.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\3.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\4_pqydvf.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\5_plievp.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\6_cl95ng.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\pims\7.png" alt=""></img>
+                    </div>
+                </div>
+                </div>
+
             </div>
             <hr/>
             <div className="container" style={{width:"60%"}}>

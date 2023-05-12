@@ -7,7 +7,48 @@ function Vpn(){
         <div>
             <br/>
             <div>
-                <h1 className="text-center">Images !!!</h1>
+                
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\1_qgk1ur.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\2_v13h26.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\3_ecdjzm.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\4_ncsqrn.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\1_qgk1ur.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\2_v13h26.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\3_ecdjzm.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\4_ncsqrn.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\1_qgk1ur.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\2_v13h26.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\3_ecdjzm.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\vpn\4_ncsqrn.png" alt=""></img>
+                    </div>
+                </div>
+                </div>
+
             </div>
             <hr/>
             <div className="container" style={{width:"60%"}}>

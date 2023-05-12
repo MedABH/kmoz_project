@@ -1,7 +1,23 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { useState } from "react";
+
 
 function MenuBar() {
+
+const dropdownItem=[
+    {lang:"englais", value:"englais"},
+    {lang:"francais", value:"francais"},
+    {lang:"Arab", value:"arab"}
+
+];
+const [value, setValue] = useState('');
+     
+      const handleChange = (event) => {
+     
+        setValue(event.target.value);
+     
+      };
     return(
         <React.Fragment>
             <nav style={{width:'100%', backdropFilter:'blur(8px)'}} className="fixed-top navbar navbar-expand-lg bg-body-tertiary text-center justify-content-center pt-0">
@@ -20,15 +36,12 @@ function MenuBar() {
                             <li className="nav-item">
                             <Link className="nav-link active px-5" to="/about"><small>About</small></Link>
                             </li>
-                            <li className="nav-item-group dropdown">
-                                <div className="nav-link dropdown-toggle active px-5" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <small>language</small></div>
-                                <div className="dropdown-menu">
-                                    <div className="dropdown-menu">
-                                        <Link className="dropdown-item" to="#">Regular link</Link>
-                                        <Link className="dropdown-item disabled" to="#">Disabled link</Link>
-                                        <Link className="dropdown-item" to="#">Another link</Link>
-                                    </div>
+                            
+                            <li className="nav-item px-5">
+                                <div>
+                                <small><select className="nav-link text-dark" style={{border:"0", backgroundColor:"#FAFAFA"}} value={value} onChange={handleChange}>
+                                    {dropdownItem.map((item) => (<option value={item.value}>{item.lang}</option>))}
+                                    </select></small>
                                 </div>
                             </li>
                         </ul>

@@ -7,7 +7,57 @@ function Fs(){
         <div>
             <br/>
             <div>
-                <h1 className="text-center">Images !!!</h1>
+                
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1142_jeode6.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1143_va7wgo.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1144_twz0o1.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1145_zfzzct.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1146_yekv4o.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1142_jeode6.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1143_va7wgo.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1144_twz0o1.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1145_zfzzct.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1146_yekv4o.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1142_jeode6.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1143_va7wgo.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1144_twz0o1.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1145_zfzzct.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\fs\IMG_1146_yekv4o.png" alt=""></img>
+                    </div>
+                </div>
+                </div>
+
             </div>
             <hr/>
             <div className="container" style={{width:"60%"}}>

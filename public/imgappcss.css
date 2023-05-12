@@ -1,0 +1,22 @@
+  
+  #imgapp {
+    width: 300px;
+    height: 700px;
+    animation: scroll 120s linear infinite;
+  }
+  
+  .slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+  }
+  
+  .slider {
+    margin: 30px;
+  }
+  
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+  }

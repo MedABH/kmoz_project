@@ -7,7 +7,55 @@ function Woodcoin(){
         <div>
             <br/>
             <div>
-                <h1 className="text-center">Images !!!</h1>
+                
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\1_olf5wj.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\2_fbfgkk.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\3_capspf.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\4_xwtwko.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\5_r4wuh7.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\6_zkpesd.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\7_yhskzv.png" alt=""></img>
+                    </div>
+
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\1_olf5wj.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\2_fbfgkk.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\3_capspf.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\4_xwtwko.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\5_r4wuh7.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\6_zkpesd.png" alt=""></img>
+                    </div>
+                    <div class="slide">
+                    <img id="imgapp" src="appPic\ww\7_yhskzv.png" alt=""></img>
+                    </div>
+                </div>
+                </div>
+
             </div>
             <hr/>
             <div className="container" style={{width:"60%"}}>

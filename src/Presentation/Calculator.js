@@ -3,6 +3,23 @@ import { useState, useEffect } from "react";
 export default function Calculator(){
     const [prix, setPrix]=useState(250);
 
+    const [torF, setTorF]=useState(true);
+    const [torF2, setTorF2]=useState(true);
+    const [torF3, setTorF3]=useState(true);
+    const [torF4, setTorF4]=useState(true);
+
+    /*const checker = document.getElementById('btncheck1');
+    const sendbtn = document.getElementById('btncheck4');
+
+    checker.onchange = function(){
+        if(this.checked){
+            sendbtn.disabled = false;
+        } else {
+            sendbtn.disabled = true;
+        }
+        
+        };*/
+
     const [xat,setXat]=useState(false);
     const [xat2,setXat2]=useState(false);
     const [xat3,setXat3]=useState(false);
@@ -39,6 +56,50 @@ export default function Calculator(){
     const [xat34,setXat34]=useState(false);
     const [xat35,setXat35]=useState(false);
     const [xat36,setXat36]=useState(false);
+
+    /*const [b1,setB1] = useState();
+    const [b2,setB2] = useState(0);
+    const [b3,setB3] = useState(0);
+    const [b4,setB4] = useState(0);
+    const [b5,setB5] = useState(0);
+    const [b6,setB6] = useState(0);
+    const [b7,setB7] = useState(0);
+    const [b8,setB8] = useState(0);
+    const [b9,setB9] = useState(0);
+    const [b10,setB10] = useState(0);
+    const [b11,setB11] = useState(0);
+    const [b12,setB12] = useState(0);
+    const [b13,setB13] = useState(0);
+    const [b14,setB14] = useState(0);
+    const [b15,setB15] = useState(0);
+    const [b16,setB16] = useState(0);
+    const [b17,setB17] = useState(0);
+    const [b18,setB18] = useState(0);
+    const [b19,setB19] = useState(0);
+    const [b20,setB20] = useState(0);
+    const [b21,setB21] = useState(0);
+    const [b22,setB22] = useState(0);
+    const [b23,setB23] = useState(0);
+    const [b24,setB24] = useState(0);
+    const [b25,setB25] = useState(0);
+    const [b26,setB26] = useState(0);
+    const [b27,setB27] = useState(0);
+    const [b28,setB28] = useState(0);
+    const [b29,setB29] = useState(0);
+    const [b30,setB30] = useState(0);
+    const [b31,setB31] = useState(0);
+    const [b32,setB32] = useState(0);
+    const [b33,setB33] = useState(0);
+    const [b34,setB34] = useState(0);
+    const [b35,setB35] = useState(0);
+    const [b36,setB36] = useState(0);
+
+    const [empObj, setEmpObj] = useState([])
+    const [obj, setObj] = useState(empObj)
+
+    function onCh (e){
+        let _obj = 
+    }*/
 
     const xev=(event)=>{
         setXat(event.target.checked);
@@ -148,15 +209,41 @@ export default function Calculator(){
     const xev36=(event)=>{
         setXat36(event.target.checked);
     }
-    
-    /*useEffect((event)=>{
-        if(xat==true || xat2 == true || xat3 == true){
-                event.target.disabled=false
+
+    useEffect(()=>{
+        if (xat==true || xat2==true || xat3==true){
+            setTorF(false)
+            setD(false)
         }
         else{
-                event.target.disabled=true
+            setTorF(true)
+            setD(true)
+        };
+    },[xat,xat2,xat3]);
+    useEffect(()=>{
+        if (xat35==true || xat4==true || xat36==true){
+            setTorF2(false)
         }
-    },[]);*/
+        else{
+            setTorF2(true)
+        };
+    },[xat35,xat4,xat36]);
+    useEffect(()=>{
+        if (xat5==true || xat6==true || xat7==true){
+            setTorF3(false)
+        }
+        else{
+            setTorF3(true)
+        };
+    },[xat5,xat6,xat7]);
+    useEffect(()=>{
+        if (xat8==true || xat9==true || xat10==true){
+            setTorF4(false)
+        }
+        else{
+            setTorF4(true)
+        };
+    },[xat8,xat9,xat10]);
 
     useEffect(()=>{
         if (xat==true){
@@ -447,6 +534,31 @@ export default function Calculator(){
         };
     },[xat36]);
     
+    /*function onCh (e){
+        let name= e.target.name
+        let val = e.target.value
+        let _obj = {...obj}
+        _obj[name]=val
+        setObj(_obj)
+    }*/
+    
+    /*useEffect((event)=>{
+        if(xat==true || xat2 == true || xat3 == true){
+            return(
+                document.getElementById('btncheck4').disabled=false
+            )
+    }
+    else{
+            return(
+                document.getElementById('btncheck4').disabled=true
+            )
+    }
+    },[xat,xat2,xat3]);*/
+
+    const [d, setD] = useState(true);
+
+    /*const style1 = (xat == false ? "border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'" :
+    "border:'1',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)', backgroundColor:'yellow'")*/
 
     return(
         <div>
@@ -456,25 +568,26 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}}>
                         <h5 style={{margin:'40px'}}>What platforms do you want to develop a product for?</h5>
                         <div className="" >
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck1" onChange={xev}/>
-                            <label className="btn btn-outline-primary" for="btncheck1" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}}>
+                            <input type="checkbox" className="btn-check" id="btncheck1" onChange={xev} />
+                            <label className="btn btn-outline-primary" for="btncheck1" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
+                            
                             <img src="calculator_logo\Apple.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Apple</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck2" onChange={xev2}/>
-                            <label className="btn btn-outline-primary" for="btncheck2" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}}>
+                            <input type="checkbox" className="btn-check" id="btncheck2" onChange={xev2}/>
+                            <label className="btn btn-outline-primary" for="btncheck2" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\Android.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Android</strong>
                             </label>
                             </button>
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck3" onChange={xev3}/>
-                            <label className="btn btn-outline-primary" for="btncheck3" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}}>
+                            <input type="checkbox" className="btn-check" id="btncheck3" onChange={xev3}/>
+                            <label className="btn btn-outline-primary" for="btncheck3" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\Web.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Web</strong>
@@ -486,25 +599,25 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}} className="">
                         <h5 style={{margin:'40px'}}>What do you want to get?</h5>
                         <div>
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck4" onChange={xev35}/>
-                            <label className="btn btn-outline-primary" for="btncheck4" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF}>
+                            <input type="checkbox" disabled={torF} className="btn-check" id="btncheck4" onChange={xev35}/>
+                            <label className="btn btn-outline-primary" for="btncheck4" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\newProject.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>An application from scratch</strong>
                             </label>
                             </button>
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck5" onChange={xev4}/>
-                            <label className="btn btn-outline-primary" for="btncheck5" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF}>
+                            <input type="checkbox" disabled={torF} className="btn-check" id="btncheck5" onChange={xev4}/>
+                            <label className="btn btn-outline-primary" for="btncheck5" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\update.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Update</strong>
                             </label>
                             </button>
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                                <input type="checkbox" disabled={false} className="btn-check" id="btncheck6" onChange={xev36}/>
-                                <label className="btn btn-outline-primary" for="btncheck6"  style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF}>
+                                <input type="checkbox" disabled={torF} className="btn-check" id="btncheck6" onChange={xev36}/>
+                                <label className="btn btn-outline-primary" for="btncheck6"  style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                                 <img src="calculator_logo\revision.svg"></img>
                                 <br/>
                                 <strong style={{fontSize:'13px', color:'#828282'}}>Revision of the
@@ -517,25 +630,25 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}}>
                         <h5 style={{margin:'40px'}}>How many unique screens will there be in the app?</h5>
                         <div>
-                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck7" onChange={xev5}/>
-                            <label className="btn btn-outline-primary" for="btncheck7" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                            <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF2}>
+                            <input type="checkbox" disabled={torF2} className="btn-check" id="btncheck7" onChange={xev5}/>
+                            <label className="btn btn-outline-primary" for="btncheck7" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\less10.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Less than 10</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck8" onChange={xev6}/>
-                            <label className="btn btn-outline-primary" for="btncheck8" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF2}>
+                            <input type="checkbox" disabled={torF2} className="btn-check" id="btncheck8" onChange={xev6}/>
+                            <label className="btn btn-outline-primary" for="btncheck8" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\more10.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>From 10 to 25</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck9" onChange={xev7}/>
-                            <label className="btn btn-outline-primary" for="btncheck9" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF2}>
+                            <input type="checkbox" disabled={torF2} className="btn-check" id="btncheck9" onChange={xev7}/>
+                            <label className="btn btn-outline-primary" for="btncheck9" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\more25.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>More than 25</strong>
@@ -548,25 +661,25 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}}>
                         <h5 style={{margin:'40px'}}>What is the degree of development of the application interface?</h5>
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck10" onChange={xev8}/>
-                            <label className="btn btn-outline-primary" for="btncheck10" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF3}>
+                            <input type="checkbox" disabled={torF3} className="btn-check" id="btncheck10" onChange={xev8}/>
+                            <label className="btn btn-outline-primary" for="btncheck10" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\simple.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Simple</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck11" onChange={xev9}/>
-                            <label className="btn btn-outline-primary" for="btncheck11" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF3}>
+                            <input type="checkbox" disabled={torF3} className="btn-check" id="btncheck11" onChange={xev9}/>
+                            <label className="btn btn-outline-primary" for="btncheck11" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\unique.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Unique</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck12" onChange={xev10}/>
-                            <label className="btn btn-outline-primary" for="btncheck12" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF3}>
+                            <input type="checkbox" disabled={torF3} className="btn-check" id="btncheck12" onChange={xev10}/>
+                            <label className="btn btn-outline-primary" for="btncheck12" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\animation.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Unique with animation</strong>
@@ -578,25 +691,25 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}}>
                         <h5 style={{margin:'40px'}}>What features do you want to include in the app?</h5>
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck13" onChange={xev11}/>
-                            <label className="btn btn-outline-primary" for="btncheck13" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck13" onChange={xev11}/>
+                            <label className="btn btn-outline-primary" for="btncheck13" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\search.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Search</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck14" onChange={xev12}/>
-                            <label className="btn btn-outline-primary" for="btncheck14" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck14" onChange={xev12}/>
+                            <label className="btn btn-outline-primary" for="btncheck14" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\map.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Map</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck15" onChange={xev13}/>
-                            <label className="btn btn-outline-primary" for="btncheck15" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck15" onChange={xev13}/>
+                            <label className="btn btn-outline-primary" for="btncheck15" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\catalog.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Catalog</strong>
@@ -605,25 +718,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck16" onChange={xev14}/>
-                            <label className="btn btn-outline-primary" for="btncheck16" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck16" onChange={xev14}/>
+                            <label className="btn btn-outline-primary" for="btncheck16" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\calendar.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Calendar</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck17" onChange={xev15}/>
-                            <label className="btn btn-outline-primary" for="btncheck17" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck17" onChange={xev15}/>
+                            <label className="btn btn-outline-primary" for="btncheck17" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\card.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Payments</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck18" onChange={xev16}/>
-                            <label className="btn btn-outline-primary" for="btncheck18" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck18" onChange={xev16}/>
+                            <label className="btn btn-outline-primary" for="btncheck18" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\booking.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Booking</strong>
@@ -632,25 +745,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck19" onChange={xev17}/>
-                            <label className="btn btn-outline-primary" for="btncheck19" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck19" onChange={xev17}/>
+                            <label className="btn btn-outline-primary" for="btncheck19" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\login.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Registration and authorization</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck20" onChange={xev18}/>
-                            <label className="btn btn-outline-primary" for="btncheck20" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck20" onChange={xev18}/>
+                            <label className="btn btn-outline-primary" for="btncheck20" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\chat.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Chats</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck21" onChange={xev19}/>
-                            <label className="btn btn-outline-primary" for="btncheck21" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck21" onChange={xev19}/>
+                            <label className="btn btn-outline-primary" for="btncheck21" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\unique.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Favourites</strong>
@@ -659,25 +772,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck22" onChange={xev20}/>
-                            <label className="btn btn-outline-primary" for="btncheck22" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck22" onChange={xev20}/>
+                            <label className="btn btn-outline-primary" for="btncheck22" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\rating.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Reviews and ratings</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck23" onChange={xev21}/>
-                            <label className="btn btn-outline-primary" for="btncheck23" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck23" onChange={xev21}/>
+                            <label className="btn btn-outline-primary" for="btncheck23" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\notification.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Notifications</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck24" onChange={xev22}/>
-                            <label className="btn btn-outline-primary" for="btncheck24" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck24" onChange={xev22}/>
+                            <label className="btn btn-outline-primary" for="btncheck24" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\files.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Working with files</strong>
@@ -686,25 +799,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck25" onChange={xev23}/>
-                            <label className="btn btn-outline-primary" for="btncheck25" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck25" onChange={xev23}/>
+                            <label className="btn btn-outline-primary" for="btncheck25" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\ar.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>AR</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck26" onChange={xev24}/>
-                            <label className="btn btn-outline-primary" for="btncheck26" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck26" onChange={xev24}/>
+                            <label className="btn btn-outline-primary" for="btncheck26" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\datacollection.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Collecting data from sensors</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck27" onChange={xev25}/>
-                            <label className="btn btn-outline-primary" for="btncheck27" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck27" onChange={xev25}/>
+                            <label className="btn btn-outline-primary" for="btncheck27" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\usertesting.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>User testing</strong>
@@ -713,25 +826,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck28" onChange={xev26}/>
-                            <label className="btn btn-outline-primary" for="btncheck28" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck28" onChange={xev26}/>
+                            <label className="btn btn-outline-primary" for="btncheck28" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\support.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Technical support</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck29" onChange={xev27}/>
-                            <label className="btn btn-outline-primary" for="btncheck29" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck29" onChange={xev27}/>
+                            <label className="btn btn-outline-primary" for="btncheck29" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\qr.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>QR</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck30" onChange={xev28}/>
-                            <label className="btn btn-outline-primary" for="btncheck30" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck30" onChange={xev28}/>
+                            <label className="btn btn-outline-primary" for="btncheck30" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\3d.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>3D</strong>
@@ -743,25 +856,25 @@ export default function Calculator(){
                     <div style={{marginTop:'80px'}}>
                         <h5 style={{margin:'40px'}}>Which third-party services do you need to interact with?</h5>
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck31" onChange={xev29}/>
-                            <label className="btn btn-outline-primary" for="btncheck31" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck31" onChange={xev29}/>
+                            <label className="btn btn-outline-primary" for="btncheck31" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\sms.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>SMS Mailing</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck32" onChange={xev30}/>
-                            <label className="btn btn-outline-primary" for="btncheck32" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck32" onChange={xev30}/>
+                            <label className="btn btn-outline-primary" for="btncheck32" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\api.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>API</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck33" onChange={xev31}/>
-                            <label className="btn btn-outline-primary" for="btncheck33" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck33" onChange={xev31}/>
+                            <label className="btn btn-outline-primary" for="btncheck33" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\crm.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>CRM</strong>
@@ -770,25 +883,25 @@ export default function Calculator(){
                         </div>
 
                         <div>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck34" onChange={xev32}/>
-                            <label className="btn btn-outline-primary" for="btncheck34" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck34" onChange={xev32}/>
+                            <label className="btn btn-outline-primary" for="btncheck34" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\cms.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>CMS</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck35" onChange={xev33}/>
-                            <label className="btn btn-outline-primary" for="btncheck35" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck35" onChange={xev33}/>
+                            <label className="btn btn-outline-primary" for="btncheck35" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\billing.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Billing systems</strong>
                             </label>
                             </button>
-                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
-                            <input type="checkbox" disabled={false} className="btn-check" id="btncheck36" onChange={xev34}/>
-                            <label className="btn btn-outline-primary" for="btncheck36" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px'}}>
+                             <button style={{margin:'20px', marginTop:'0px', border:'0',width:'155px', height:'95px', borderRadius:'15px', backgroundColor:'#DCDCDC'}} disabled={torF4}>
+                            <input type="checkbox" disabled={torF4} className="btn-check" id="btncheck36" onChange={xev34}/>
+                            <label className="btn btn-outline-primary" for="btncheck36" style={{border:'0',width:'155px', height:'95px', borderRadius:'15px', transform:'translate(-5.15%,-3%)'}}>
                             <img src="calculator_logo\cashmachine.svg"></img>
                             <br/>
                             <strong style={{fontSize:'13px', color:'#828282'}}>Cash register equipment</strong>
@@ -808,16 +921,53 @@ export default function Calculator(){
         <br/>
             <div style={{backgroundColor:'#FAFAFA'}} className="fixed-bottom">
                 <hr style={{marginTop:'0px'}}/>
-                <div style={{margin:'10px', marginLeft:'200px',marginRight:'200px'}} className="row">
+                <div style={{margin:'10px', marginLeft:'200px',marginRight:'200px'}} className="row" >
                     <div className="col-6">
                         <h6 style={{color:'#828282'}}>The cost of developing your application</h6>
                         <h3><strong>{prix} $</strong></h3>
                     </div>
                     <div className="col-3">
-                        <button>Get the cost calculation</button>
+                        <button disabled={d}>Get the cost calculation</button>
                     </div>
                     <div className="col-3 text-decoration-none">
-                        <button style={{border:'0'}} onClick={()=>{}}>Clear</button>
+                        <button style={{border:'0'}} disabled={d} onClick={()=>{
+                            setXat(false);
+                            setXat2(false);
+                            setXat3(false);
+                            setXat4(false);
+                            setXat5(false);
+                            setXat6(false);
+                            setXat7(false);
+                            setXat8(false);
+                            setXat9(false);
+                            setXat10(false);
+                            setXat11(false);
+                            setXat12(false);
+                            setXat13(false);
+                            setXat14(false);
+                            setXat15(false);
+                            setXat16(false);
+                            setXat17(false);
+                            setXat18(false);
+                            setXat19(false);
+                            setXat20(false);
+                            setXat21(false);
+                            setXat22(false);
+                            setXat23(false);
+                            setXat24(false);
+                            setXat25(false);
+                            setXat26(false);
+                            setXat27(false);
+                            setXat28(false);
+                            setXat29(false);
+                            setXat30(false);
+                            setXat31(false);
+                            setXat32(false);
+                            setXat33(false);
+                            setXat34(false);
+                            setXat35(false);
+                            setXat36(false);
+                    }}>Clear</button>
                     </div>
                 </div>
             </div>

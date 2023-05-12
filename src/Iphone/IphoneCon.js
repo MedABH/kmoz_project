@@ -1,10 +1,10 @@
-import IphoneTimeAcc from "./IphoneTimeAcc";
+import IphoneTimeCon from "./IphoneTimeCon";
 
 function Iphone(){
 
     return(
         <>
-            <IphoneTimeAcc/>
+            <IphoneTimeCon/>
             <div>
                 <img style={{width:'300px'}} src="test.svg" alt="Iphone"></img>
             </div>

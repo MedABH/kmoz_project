@@ -1,5 +1,4 @@
-import IphoneFooter from "./IphoneFooter";
-import IphoneTime from "./IphoneTime";
+import IphoneFooterAcc from "./IphoneFooterAcc";
 import { Link } from "react-router-dom";
 
 function IphoneAccueil(){
@@ -18,7 +17,7 @@ function IphoneAccueil(){
                                 <br/>
                                 <small>Food delivery</small>
                             </div>
-                            <button style={{border:'0', borderRadius:'20px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/pims">open</Link></button>
+                            <button style={{border:'0', borderRadius:'20px', height:'30px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/pims">open</Link></button>
                         </li>
                         <hr style={{margin:'7px'}}/>
                         <li className="row">
@@ -28,7 +27,7 @@ function IphoneAccueil(){
                                 <br/>
                                 <small>Crypto Wallet</small>
                             </div>
-                            <button style={{border:'0', borderRadius:'20px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/woodcoin">open</Link></button>
+                            <button style={{border:'0', borderRadius:'20px', height:'30px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/woodcoin">open</Link></button>
                         </li>
                         <hr style={{margin:'7px'}}/>
                         <li className="row">
@@ -38,7 +37,7 @@ function IphoneAccueil(){
                                 <br/>
                                 <small>Secure connection</small>
                             </div>
-                            <button style={{border:'0', borderRadius:'20px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/vpn">open</Link></button>
+                            <button style={{border:'0', borderRadius:'20px', height:'30px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/vpn">open</Link></button>
                         </li>
                         <hr style={{margin:'7px'}}/>
                         <li className="row">
@@ -48,14 +47,14 @@ function IphoneAccueil(){
                                 <br/>
                                 <small>Football school's personal account</small>
                             </div>
-                            <button style={{border:'0', borderRadius:'20px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/fs">open</Link></button>
+                            <button style={{border:'0', borderRadius:'20px', height:'30px'}} className="col-3 text-primary"><Link className="text-decoration-none" to="/fs">open</Link></button>
                         </li>
                         <hr style={{margin:'7px'}}/>
                     </ul>
                 </div>
             </div>
             <div style={{marginTop:'130px'}}>
-                <IphoneFooter/>
+                <IphoneFooterAcc/>
             </div>
         </div>
     )
