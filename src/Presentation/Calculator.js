@@ -1,4 +1,10 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 export default function Calculator(){
     const [prix, setPrix]=useState(250);
@@ -7,6 +13,11 @@ export default function Calculator(){
     const [torF2, setTorF2]=useState(true);
     const [torF3, setTorF3]=useState(true);
     const [torF4, setTorF4]=useState(true);
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     /*const checker = document.getElementById('btncheck1');
     const sendbtn = document.getElementById('btncheck4');
@@ -101,6 +112,7 @@ export default function Calculator(){
         let _obj = 
     }*/
 
+    //checked: 
     const xev=(event)=>{
         setXat(event.target.checked);
     }
@@ -210,6 +222,7 @@ export default function Calculator(){
         setXat36(event.target.checked);
     }
 
+    //disabled:
     useEffect(()=>{
         if (xat==true || xat2==true || xat3==true){
             setTorF(false)
@@ -245,12 +258,20 @@ export default function Calculator(){
         };
     },[xat8,xat9,xat10]);
 
+    //values img:
+    //const logo = require('./logo.jpeg');
+    //const [i1, setI1]= useState(require('./imgTest/JavaScript.png'))
+
+    //setPrix:
     useEffect(()=>{
-        if (xat==true){
+        if (xat===true){
             setPrix(prix+625)
+            //setI1(require('./imgTest/JavaScript.png'))
+
         }
         else{
             setPrix(prix-625)
+            //setI1(require('./imgTest/JavaScript.png'))
         };
     },[xat]);
     useEffect(()=>{
@@ -927,10 +948,51 @@ export default function Calculator(){
                         <h3><strong>{prix} $</strong></h3>
                     </div>
                     <div className="col-3">
-                        <button disabled={d}>Get the cost calculation</button>
+                        <Button disabled={d} variant="primary" onClick={handleShow}>
+                            Get the cost calculation
+                        </Button>
+
+                        <Modal show={show} onHide={handleClose} centered>
+                        <Container>
+                            <Modal.Header closeButton>
+                                <img style={{width:'80px', marginLeft:'180px'}} src="logo.svg"/>
+                            </Modal.Header>
+                            <Modal.Body>
+                            
+                            <p style={{fontSize:'13px', textAlign:'center'}}>Please enter your email address. We will send you a calculation of the cost of the application.</p>
+                            <Form>
+                                <Form.Group className="mb-4 mt-4" controlId="exampleForm.ControlInput1">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Name*"
+                                    autoFocus
+                                />
+                                </Form.Group>
+                                <Form.Group className="mb-4 mt-4" controlId="exampleForm.ControlInput1">
+                                <Form.Control
+                                    type="email"
+                                    placeholder="Email*"
+                                />
+                                </Form.Group>
+                                <Form.Group className="mb-4 mt-4" controlId="exampleForm.ControlInput1">
+                                <Form.Control
+                                    placeholder="Phone Number (optional)*"
+                                />
+                                </Form.Group>
+                            </Form>
+                            
+                            </Modal.Body>
+                            </Container>
+                            <Modal.Footer className="justify-content-center">
+                            <Button style={{width:'150px'}} variant="primary" onClick={handleClose}>
+                                Send
+                            </Button>
+                            </Modal.Footer>
+                        </Modal>
                     </div>
                     <div className="col-3 text-decoration-none">
                         <button style={{border:'0'}} disabled={d} onClick={()=>{
+                            
                             setXat(false);
                             setXat2(false);
                             setXat3(false);

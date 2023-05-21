@@ -4,20 +4,6 @@ import { useState } from "react";
 
 
 function MenuBar() {
-
-const dropdownItem=[
-    {lang:"englais", value:"englais"},
-    {lang:"francais", value:"francais"},
-    {lang:"Arab", value:"arab"}
-
-];
-const [value, setValue] = useState('');
-     
-      const handleChange = (event) => {
-     
-        setValue(event.target.value);
-     
-      };
     return(
         <React.Fragment>
             <nav style={{width:'100%', backdropFilter:'blur(8px)'}} className="fixed-top navbar navbar-expand-lg bg-body-tertiary text-center justify-content-center pt-0">
@@ -35,14 +21,6 @@ const [value, setValue] = useState('');
                             </li>
                             <li className="nav-item">
                             <Link className="nav-link active px-5" to="/about"><small>About</small></Link>
-                            </li>
-                            
-                            <li className="nav-item px-5">
-                                <div>
-                                <small><select className="nav-link text-dark" style={{border:"0", backgroundColor:"#FAFAFA"}} value={value} onChange={handleChange}>
-                                    {dropdownItem.map((item) => (<option value={item.value}>{item.lang}</option>))}
-                                    </select></small>
-                                </div>
                             </li>
                         </ul>
                     </div>
