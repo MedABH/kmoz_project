@@ -980,7 +980,6 @@ export default function Calculator(){
                                 />
                                 </Form.Group>
                             </Form>
-                            
                             </Modal.Body>
                             </Container>
                             <Modal.Footer className="justify-content-center">
